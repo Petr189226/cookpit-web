@@ -33,6 +33,11 @@
 	@rest not path /assets/fonts/* *.webp *.jpg *.jpeg *.png *.svg *.ico
 	header @rest Cache-Control "public, max-age=0, must-revalidate"
 
+	# Konfigurace a nástroje do repozitáře patří, na web ne. Blokuje se tady, protože
+	# Railway nemusí obraz stavět přes Dockerfile a soubory by se pak servírovaly.
+	@private path /Dockerfile /Caddyfile /railway.json /.dockerignore /.gitignore /README.md /CNAME /.nojekyll /tools /tools/*
+	error @private 404
+
 	file_server
 
 	handle_errors {
