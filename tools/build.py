@@ -36,7 +36,7 @@ PENDING = {
 }
 
 # Po schválení textů právníkem přepnout na False: zmizí upozornění „Návrh k revizi právníkem“.
-DRAFT = True
+DRAFT = False
 
 # Aplikace se dřív jmenovala Uvařím. Návrhy v docs/legal ten název ještě používají.
 RENAME = [('Uvařím', 'Cookpit')]

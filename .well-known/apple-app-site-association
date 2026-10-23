@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7X4AX8ACWV.cz.spaicestudio.cookpit"],
+        "components": [
+          { "/": "/pozvanka/*", "comment": "Pozvánka do domácnosti" },
+          { "/": "/recept/*", "comment": "Sdílený recept" }
+        ]
+      }
+    ]
+  }
+}

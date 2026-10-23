@@ -31,6 +31,6 @@ Skript vypíše, co ještě chybí doplnit. Na stránkách je to žlutě označe
 | Podmínky (odkaz v popisu kvůli předplatnému) | `https://cookpit.spaicestudio.cz/podminky/` |
 | Smazání účtu (Google Play) | `https://cookpit.spaicestudio.cz/smazani-uctu/` |
 
-## Universal links (později)
+## Universal links
 
-Až bude mít aplikace `EXPO_PUBLIC_WEB_URL=https://cookpit.spaicestudio.cz` a známé Team ID, přidej `.well-known/apple-app-site-association` (vygeneruje ho `apps/web` v repozitáři aplikace). `Caddyfile` ho servíruje jako `application/json`, jak iOS vyžaduje.
+`.well-known/apple-app-site-association` pouští do aplikace (`7X4AX8ACWV.cz.spaicestudio.cookpit`, associated domain `applinks:cookpit.spaicestudio.cz`) odkazy `/pozvanka/*` a `/recept/*`. `Caddyfile` ho servíruje jako `application/json`. Když aplikace nainstalovaná není, otevře se na webu záložní stránka z `404.html`.
