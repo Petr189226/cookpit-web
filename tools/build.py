@@ -139,7 +139,7 @@ def legal(name):
     src = re.sub(r'^# .*\n', '', src, count=1, flags=re.M)
     body, toc = markdown(src)
     # „Účinné od …“ patří pod nadpis jako datum, zbytek odstavce je úvod
-    m = re.search(r'<p>(Účinné od .+?\.)\s+(.*?)</p>', body)
+    m = re.search(r'<p>(Účinné od (?:\d{1,2}\.\s*){2}\d{4}|Účinné od [^.]+)\.?\s+(.*?)</p>', body)
     meta = ''
     if m:
         meta = f'<p class="meta">{m.group(1)}</p>'
@@ -282,9 +282,9 @@ faq = [
     ('Jak zruším předplatné?',
      '<p>V nastavení App Store, nejpozději 24 hodin před koncem období. Postup krok za krokem najdeš na stránce <a href="/zruseni/">Jak zrušit předplatné</a>.</p>'),
     ('Jak smažu účet a data?',
-     '<p>V aplikaci: <span class="path">Profil → Smazat účet</span>. Data se smažou hned. Víc na stránce <a href="/smazani-uctu/">Smazání účtu</a>.</p>'),
+     '<p>V aplikaci: <span class="path">Profil → Tvoje data → Smazat účet a data</span>. Data se smažou hned. Víc na stránce <a href="/smazani-uctu/">Smazání účtu</a>.</p>'),
     ('Jak si stáhnu svá data?',
-     '<p>V aplikaci: <span class="path">Profil → Exportovat data</span>.</p>'),
+     '<p>V aplikaci: <span class="path">Profil → Tvoje data → Stáhnout moje data</span>.</p>'),
     ('Cena v obchodě je jiná než v aplikaci.',
      '<p>U ceny v aplikaci klepni na „Cena nesedí?“ a dej nám vědět, opravíme ji. Ceny přebíráme z letáků obchodníků s uvedenou platností, v obchodě ale rozhoduje cena na místě.</p>'),
     ('Jak pozvu domácnost?',
@@ -317,7 +317,7 @@ write('podpora/index.html', page('/podpora/', 'Podpora', doc('Podpora', '', supp
 deletion = f'''        <p class="lead">Účet i všechna data smažeš přímo v aplikaci. Nemusíš nám kvůli tomu psát.</p>
         <ol>
           <li>Otevři Cookpit a přejdi do <span class="path">Profilu</span>.</li>
-          <li>Klepni na <span class="path">Smazat účet</span> a smazání potvrď.</li>
+          <li>V části <span class="path">Tvoje data</span> klepni na <span class="path">Smazat účet a data</span> a smazání potvrď.</li>
         </ol>
         <h2 id="co-se-smaze">Co se smaže</h2>
         <p>Účet a s ním profil domácnosti, plán, nákupní seznam, spíž, oblíbené recepty, hodnocení a úspory. Smazání proběhne hned. Fotky lednice mažeme už po přečtení, nejpozději do 24 hodin.</p>
@@ -325,9 +325,9 @@ deletion = f'''        <p class="lead">Účet i všechna data smažeš přímo v
         <h2 id="predplatne">Předplatné se smazáním nezruší</h2>
         <p>Plus platíš přes App Store, proto ho zruš tam. Postup najdeš na stránce <a href="/zruseni/">Jak zrušit předplatné</a>.</p>
         <h2 id="export">Než účet smažeš</h2>
-        <p>Pokud si chceš data nechat, stáhni si je: <span class="path">Profil → Exportovat data</span>.</p>
+        <p>Pokud si chceš data nechat, stáhni si je: <span class="path">Profil → Tvoje data → Stáhnout moje data</span>.</p>
         <h2 id="bez-aplikace">Aplikaci už nemáš?</h2>
-        <p>Napiš nám a účet smažeme za tebe. Pokud jsi přihlášený přes Apple, Google nebo e-mail, napiš z adresy, kterou u účtu používáš, ať ho najdeme.</p>
+        <p>Napiš nám a účet smažeme za tebe. Pokud jsi přihlášený přes Apple, Google nebo e-mail, napiš z adresy, kterou u účtu používáš, ať ho najdeme. Anonymní účet bez přihlášení k nikomu přiřadit nedokážeme; smažeme ho sami po 12 měsících, kdy se k němu aplikace nepřipojí.</p>
         {contact('Žádost o smazání účtu')}'''
 write('smazani-uctu/index.html', page('/smazani-uctu/', 'Smazání účtu', doc('Smazání účtu', '', deletion), 'Jak smazat účet Cookpit a všechna data.'))
 
