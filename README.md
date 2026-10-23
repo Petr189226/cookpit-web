@@ -1,6 +1,6 @@
 # cookpit.spaicestudio.cz
 
-Web aplikace Cookpit. Statický, bez buildu: co je v repozitáři, to se nasadí (GitHub Pages, doména v souboru `CNAME`). Nasazení a DNS popisuje README webu spaicestudio.cz.
+Web aplikace Cookpit. Statický, bez buildu: co je v repozitáři, to se nasadí. Běží na Railway (služba `cookpit` v projektu spaicestudio.cz): `Dockerfile` zabalí soubory do Caddy, `Caddyfile` řeší hlavičky, cache, záložní stránku pro `/pozvanka/*` a `/recept/*` a typ `apple-app-site-association`. Každý push do `main` web znovu nasadí. DNS popisuje README webu spaicestudio.cz.
 
 | Cesta | Obsah |
 |---|---|
@@ -33,4 +33,4 @@ Skript vypíše, co ještě chybí doplnit. Na stránkách je to žlutě označe
 
 ## Universal links (později)
 
-Až bude mít aplikace `EXPO_PUBLIC_WEB_URL=https://cookpit.spaicestudio.cz` a známé Team ID, přidej `.well-known/apple-app-site-association` (vygeneruje ho `apps/web` v repozitáři aplikace). GitHub Pages u něj nedovolí nastavit hlavičky, proto ho po nasazení ověř a kdyby ho iOS nepřijal, zapni pro subdoménu proxy v Cloudflare s pravidlem pro `Content-Type: application/json`.
+Až bude mít aplikace `EXPO_PUBLIC_WEB_URL=https://cookpit.spaicestudio.cz` a známé Team ID, přidej `.well-known/apple-app-site-association` (vygeneruje ho `apps/web` v repozitáři aplikace). `Caddyfile` ho servíruje jako `application/json`, jak iOS vyžaduje.
