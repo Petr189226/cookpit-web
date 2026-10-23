@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cookpit: večeře z akcí na celý týden</title>
+  <meta name="description" content="Cookpit každý týden složí večeře z akcí ve tvých obchodech, napíše nákupní seznam a spočítá, kolik ušetříš. Aplikace pro iPhone.">
+  <link rel="canonical" href="https://cookpit.spaicestudio.cz/">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0d0f" media="(prefers-color-scheme: dark)">
+  <!-- Po vydání: <meta name="apple-itunes-app" content="app-id=ID_APLIKACE"> -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Cookpit">
+  <meta property="og:title" content="Cookpit: večeře z akcí na celý týden">
+  <meta property="og:description" content="Řekni, kolik vás je a kde nakupuješ. Cookpit ti každý týden složí večeře z aktuálních letáků a spočítá, kolik ušetříš.">
+  <meta property="og:url" content="https://cookpit.spaicestudio.cz/">
+  <meta property="og:image" content="https://cookpit.spaicestudio.cz/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/red-hat-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/red-hat-display-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Cookpit",
+    "operatingSystem": "iOS",
+    "applicationCategory": "LifestyleApplication",
+    "inLanguage": "cs",
+    "description": "Týdenní plán večeří z akcí ve tvých obchodech, nákupní seznam a přehled úspor.",
+    "url": "https://cookpit.spaicestudio.cz/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CZK" },
+    "publisher": { "@type": "Person", "name": "Petr Chajda" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="top" data-top>
+    <div class="wrap top__in">
+      <a class="brand" href="/" aria-label="Cookpit, úvod">
+        <img src="/assets/img/app-icon.webp" alt="" width="30" height="30">
+        <span>Cookpit</span>
+      </a>
+      <nav aria-label="Hlavní">
+        <a class="hide-sm" href="#jak">Jak to funguje</a>
+        <a class="hide-sm" href="#plus">Plus</a>
+        <a href="/podpora/">Podpora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah">
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="hero__frame">
+        <picture class="hero__media">
+          <source media="(max-width: 639px)" srcset="/assets/img/hero-m-820.webp 820w, /assets/img/hero-m-1229.webp 1229w" sizes="100vw">
+          <img src="/assets/img/hero-1600.webp" srcset="/assets/img/hero-1600.webp 1600w, /assets/img/hero-2800.webp 2800w" sizes="(max-width: 1488px) 100vw, 1440px" width="2800" height="1225" fetchpriority="high"
+            alt="Telefon s aplikací Cookpit leží na jídelním stole mezi talířem špaget a miskou orza. Na displeji je tip na dnešek: Spagety s míchanými vejci a slaninou.">
+        </picture>
+        <div class="hero__copy">
+          <h1 id="hero-h">Večeře <mark>z akcí</mark>.<br> Bez přemýšlení.</h1>
+          <p class="hero__lead">Řekni, kolik vás je a kde nakupuješ. Cookpit ti každý týden složí večeře z aktuálních letáků, napíše nákupní seznam a spočítá, kolik ušetříš.</p>
+          <div class="hero__cta">
+            <!-- Po vydání nahradit oficiálním odznakem „Stáhnout v App Store“ s odkazem do App Store -->
+            <a class="btn btn--light" href="#jak">Jak to funguje</a>
+            <span class="soon">Brzy v App Store pro iPhone</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flow" id="jak" aria-labelledby="jak-h">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="jak-h">Od letáku k talíři</h2>
+          <p>Cookpit spojí tři věci, které jinak řešíš zvlášť: co je zrovna v akci, co doma rádi jíte a kolik na to máte.</p>
+        </div>
+
+        <div class="flow__grid">
+          <div class="flow__device phone" data-flow-device aria-hidden="true">
+            <div class="phone__screen">
+              <img class="is-active" src="/assets/img/uv-tyden.webp" alt="" width="900" height="1957" loading="lazy">
+              <img src="/assets/img/uv-dnes.webp" alt="" width="900" height="1957" loading="lazy">
+              <img src="/assets/img/uv-detail.webp" alt="" width="900" height="1957" loading="lazy">
+            </div>
+          </div>
+
+          <ol class="flow__steps">
+            <li class="flow__step" data-flow-step>
+              <figure class="flow__shot">
+                <div class="phone"><div class="phone__screen"><img src="/assets/img/uv-tyden.webp" width="900" height="1957" loading="lazy" alt="Obrazovka Týden: nákup na týden 583 Kč z rozpočtu 600 Kč, pět večeří, 29 Kč za porci, ušetříš 167 Kč a večeře po dnech i s akcemi."></div></div>
+              </figure>
+              <p class="label">Týden</p>
+              <h3>Celý týden večeří z aktuálních akcí</h3>
+              <p>Řekni, kolik vás je, kde nakupuješ a co nejíte. Cookpit pak každý týden projde letáky tvých obchodů a složí z nich večeře podle rozpočtu i času, který máš na vaření.</p>
+              <p class="note">U každé večeře vidíš cenu za porci a které suroviny jsou v akci. Když akce brzy končí, připomene ti, ať nakoupíš včas.</p>
+            </li>
+            <li class="flow__step" data-flow-step>
+              <figure class="flow__shot">
+                <div class="phone"><div class="phone__screen"><img src="/assets/img/uv-dnes.webp" width="900" height="1957" loading="lazy" alt="Obrazovka Dnes: tip na dnešek Spagety s míchanými vejci a slaninou, 25 minut, 26 Kč za porci, 4 porce."></div></div>
+              </figure>
+              <p class="label">Dnes</p>
+              <h3>Každý den víš, co bude k večeři</h3>
+              <p>Na úvodní obrazovce čeká dnešní večeře: za jak dlouho je hotová, kolik stojí porce a pro kolik lidí. Nemáš na ni chuť? Vyměníš ji za jinou.</p>
+              <p class="note">Alergeny a stravování hlídá Cookpit vždy, i ve verzi zdarma.</p>
+            </li>
+            <li class="flow__step" data-flow-step>
+              <figure class="flow__shot">
+                <div class="phone"><div class="phone__screen"><img src="/assets/img/uv-detail.webp" width="900" height="1957" loading="lazy" alt="Detail receptu Spagety s míchanými vejci a slaninou: 25 minut, 694 kcal a 26 Kč na porci, 104 Kč za 4 porce a tlačítko Vařit teď."></div></div>
+              </figure>
+              <p class="label">Recept</p>
+              <h3>Nakoupíš podle seznamu, uvaříš podle kroků</h3>
+              <p>Suroviny z plánu se samy složí do nákupního seznamu. Recept je přepočítaný na vaše porce a při vaření tě provede krok za krokem, i s časovači.</p>
+              <p class="note">Ceny přebíráme z letáků obchodníků. Když v obchodě nesedí, dáš vědět jedním klepnutím a opravíme je.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section more" aria-labelledby="more-h">
+      <div class="wrap more__grid">
+        <div class="head">
+          <h2 id="more-h">Co se hodí během týdne</h2>
+          <p>Drobnosti, díky kterým méně vyhodíš a méně přemýšlíš.</p>
+        </div>
+        <ul class="more__list">
+          <li>
+            <img src="/assets/img/i-fridge.webp" alt="" width="240" height="240" loading="lazy">
+            <div><h3>Sken lednice</h3><p>Vyfoť lednici a spíž se doplní sama. Hned uvidíš, co z toho uvaříš. Fotka se po rozpoznání smaže.</p></div>
+          </li>
+          <li>
+            <img src="/assets/img/i-timer.webp" alt="" width="240" height="240" loading="lazy">
+            <div><h3>Trvanlivost pod dohledem</h3><p>Den předem připomene, co ve spíži končí, a nabídne recept, který to spotřebuje.</p></div>
+          </li>
+          <li>
+            <img src="/assets/img/i-basket.webp" alt="" width="240" height="240" loading="lazy">
+            <div><h3>Společný nákupní seznam</h3><p>Seznam se složí z plánu a sdílí se s celou domácností. Kdo co koupí, uvidíte hned.</p></div>
+          </li>
+          <li>
+            <img src="/assets/img/i-family.webp" alt="" width="240" height="240" loading="lazy">
+            <div><h3>Domácnost až pro šest</h3><p>Pozvi rodinu odkazem. Plán, nákup i spíž máte společné a jedno předplatné Plus platí pro všechny.</p></div>
+          </li>
+          <li>
+            <img src="/assets/img/i-tag.webp" alt="" width="240" height="240" loading="lazy">
+            <div><h3>Hlídač slev</h3><p>Klepni na zvoneček u potraviny. Až bude máslo nebo káva v akci ve tvých obchodech, Cookpit se ozve.</p></div>
+            <span class="tier tier--plus">Plus</span>
+          </li>
+          <li>
+            <img src="/assets/img/i-pot.webp" alt="" width="240" height="240" loading="lazy">
+            <div><h3>Kuchař</h3><p>Zeptej se, čím nahradit smetanu nebo co rychlého uvařit z toho, co máš doma. Zná tvůj plán, spíž i alergeny.</p></div>
+            <span class="tier tier--plus">Plus</span>
+          </li>
+          <li>
+            <img src="/assets/img/i-savings.webp" alt="" width="240" height="240" loading="lazy">
+            <div><h3>Přehled úspor</h3><p>Kolik stojí porce, kolik zbývá z rozpočtu a kolik jste díky akcím ušetřili.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="stores-h">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="stores-h">Akce z obchodů, kde opravdu nakupuješ</h2>
+        </div>
+        <ul class="chains" aria-label="Obchody, ze kterých si vybíráš">
+          <li>Lidl</li>
+          <li>Kaufland</li>
+          <li>Albert</li>
+          <li>Billa</li>
+          <li>Penny</li>
+          <li>Tesco</li>
+          <li>Globus</li>
+          <li>Coop Jednota</li>
+          <li>Norma</li>
+          <li>Rohlík</li>
+          <li>Košík</li>
+        </ul>
+        <p class="fine">Vybereš si až tři obchody, volitelně i PSČ pro regionální letáky. Ceny přebíráme z letáků obchodníků; platí jen v uvedeném termínu a do vyprodání. Cookpit není s žádným z uvedených obchodů spojený a jejich názvy patří jejich vlastníkům.</p>
+      </div>
+    </section>
+
+    <section class="section" id="plus" aria-labelledby="plus-h">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="plus-h">Zdarma, nebo s Plus</h2>
+          <p>Základ funguje zdarma. Plus složí celý týden za tebe a odemkne celou kuchařku, pro celou domácnost.</p>
+        </div>
+        <div class="plans__grid">
+          <div class="plan">
+            <h3>Zdarma</h3>
+            <p class="plan__price">0 Kč</p>
+            <p class="plan__alt">Bez registrace a bez reklam</p>
+            <ul>
+              <li>Dvě večeře týdně z akcí, ostatní si vybereš</li>
+              <li>Akce týdne ve tvých obchodech</li>
+              <li>Nákupní seznam sdílený s domácností</li>
+              <li>Alergeny a stravování hlídá vždy</li>
+              <li>Spíž s upozorněním na trvanlivost</li>
+              <li>3 skeny lednice a 5 receptů z webu měsíčně</li>
+            </ul>
+          </div>
+          <div class="plan plan--plus">
+            <h3>Plus</h3>
+            <p class="plan__price">599 Kč<small>ročně, 14 dní zdarma</small></p>
+            <p class="plan__alt">nebo 79 Kč měsíčně, 7 dní zdarma</p>
+            <ul>
+              <li>Celý týden z akcí automaticky, s výměnou a přeskládáním</li>
+              <li>Celá knihovna receptů</li>
+              <li>Až 60 skenů lednice měsíčně</li>
+              <li>Kuchař: až 100 otázek měsíčně</li>
+              <li>Recepty z webu, textu i fotky: až 100 měsíčně</li>
+              <li>Hlídač slev, záměna surovin a kdo co nejí</li>
+              <li>Jedno předplatné pro celou domácnost, až 6 lidí</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fine">Ceny jsou včetně DPH. Platí cena, kterou ti App Store ukáže před potvrzením nákupu. Předplatné se obnovuje automaticky; zrušíš ho v nastavení App Store nejpozději 24 hodin před koncem období. <a href="/podminky/#predplatne">Podmínky předplatného</a></p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="privacy-h">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="privacy-h">Co o tobě víme. A co ne.</h2>
+          <p>Ukládáme jen to, co aplikace potřebuje: profil domácnosti, plán, nákupní seznam a spíž.</p>
+        </div>
+        <ul class="privacy__list">
+          <li><strong>Bez registrace</strong>Aplikace funguje bez e-mailu, jména i hesla. Účet je anonymní.</li>
+          <li><strong>Fotky jen na chvíli</strong>Fotku lednice smažeme hned po rozpoznání, nejpozději do 24 hodin.</li>
+          <li><strong>Bez reklam</strong>Data neprodáváme a nesledujeme tě napříč aplikacemi ani weby.</li>
+          <li><strong>Smazání v aplikaci</strong>Účet i všechna data smažeš v Profilu. Bez otázek.</li>
+        </ul>
+        <a class="more-link" href="/soukromi/">Zásady ochrany osobních údajů</a>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-h">
+      <div class="closing__frame">
+        <img src="/assets/img/table-1400.webp" srcset="/assets/img/table-1400.webp 1400w, /assets/img/table-2400.webp 2400w" sizes="(max-width: 1488px) 100vw, 1440px" width="2400" height="1340" loading="lazy"
+          alt="Jídelní stůl s večeřemi a telefonem, na kterém je otevřený týdenní plán v aplikaci Cookpit.">
+        <div class="closing__copy">
+          <img class="closing__icon" src="/assets/img/app-icon.webp" alt="" width="84" height="84" loading="lazy">
+          <h2 id="closing-h">Cookpit bude brzy v App Store</h2>
+          <p>Pro iPhone. Stažení je zdarma, Plus je volitelné předplatné.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <a class="brand" href="/"><img src="/assets/img/app-icon.webp" alt="" width="30" height="30" loading="lazy"><span>Cookpit</span></a>
+        <address>Provozuje Petr Chajda, IČO 23250607<br>Průběžná 1033/4, 100 00 Praha 10<br><a class="mail" href="mailto:cookpit@spaicestudio.cz">cookpit@spaicestudio.cz</a></address>
+      </div>
+      <nav aria-label="Patička">
+        <ul>
+          <li><a href="/podpora/">Podpora</a></li>
+          <li><a href="/soukromi/">Soukromí</a></li>
+          <li><a href="/podminky/">Podmínky</a></li>
+          <li><a href="/smazani-uctu/">Smazání účtu</a></li>
+        </ul>
+      </nav>
+      <p class="made"><span>© 2026 Petr Chajda</span><span>Navrhlo a vyvinulo <a href="https://spaicestudio.cz">spaice studio</a></span></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

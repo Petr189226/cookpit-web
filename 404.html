@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Stránka nenalezena | Cookpit</title>
+  <meta name="description" content="Stránka nenalezena.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0d0f" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Cookpit">
+  <meta property="og:title" content="Stránka nenalezena | Cookpit">
+  <meta property="og:description" content="Stránka nenalezena.">
+  <meta property="og:url" content="https://cookpit.spaicestudio.cz/404.html">
+  <meta property="og:image" content="https://cookpit.spaicestudio.cz/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/red-hat-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/red-hat-display-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="top" data-top>
+    <div class="wrap top__in">
+      <a class="brand" href="/" aria-label="Cookpit, úvod">
+        <img src="/assets/img/app-icon.webp" alt="" width="30" height="30">
+        <span>Cookpit</span>
+      </a>
+      <nav aria-label="Hlavní">
+        <a class="hide-sm" href="/#jak">Jak to funguje</a>
+        <a class="hide-sm" href="/#plus">Plus</a>
+        <a href="/podpora/">Podpora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah">
+    <section class="handoff" data-handoff="chyba">
+      <div class="wrap handoff__in">
+        <img class="art" src="/assets/img/i-plan.webp" alt="" width="160" height="160">
+        <h1>Tady nic není</h1>
+        <p>Stránka neexistuje nebo se přesunula.</p>
+        <a class="more-link" href="/">Zpět na úvod</a>
+      </div>
+    </section>
+
+    <section class="handoff" data-handoff="pozvanka" hidden>
+      <div class="wrap handoff__in">
+        <img class="art" src="/assets/img/i-family.webp" alt="" width="160" height="160">
+        <h1>Pozvánka do domácnosti</h1>
+        <div data-invite-code>
+          <div data-invite-valid hidden>
+            <p>Otevři odkaz v telefonu, kde máš Cookpit. Když se aplikace neotevře, zadej kód ručně.</p>
+            <p class="code"><span data-code></span><button type="button" data-copy>Kopírovat</button></p>
+            <ol>
+              <li>Otevři Cookpit a přejdi do Profilu.</li>
+              <li>Klepni na Mám kód pozvánky.</li>
+              <li>Vlož kód a potvrď.</li>
+            </ol>
+          </div>
+          <p data-invite-invalid hidden>Odkaz na pozvánku je neúplný. Popros toho, kdo tě zve, ať ti ho pošle znovu.</p>
+        </div>
+        <a class="more-link" href="/">Co je Cookpit</a>
+      </div>
+    </section>
+
+    <section class="handoff" data-handoff="recept" hidden>
+      <div class="wrap handoff__in">
+        <img class="art" src="/assets/img/i-pot.webp" alt="" width="160" height="160">
+        <h1>Recept z aplikace Cookpit</h1>
+        <p>Někdo ti poslal recept. Otevři odkaz v telefonu, kde máš Cookpit, a recept se ukáže v aplikaci.</p>
+        <a class="more-link" href="/">Co je Cookpit</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var first = location.pathname.split('/').filter(Boolean)[0];
+      var shown = first === 'pozvanka' || first === 'recept' ? first : 'chyba';
+      document.querySelectorAll('[data-handoff]').forEach(function (s) { s.hidden = s.dataset.handoff !== shown; });
+      if (shown === 'pozvanka') document.title = 'Pozvánka do domácnosti | Cookpit';
+      if (shown === 'recept') document.title = 'Recept | Cookpit';
+    })();
+  </script>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <a class="brand" href="/"><img src="/assets/img/app-icon.webp" alt="" width="30" height="30" loading="lazy"><span>Cookpit</span></a>
+        <address>Provozuje Petr Chajda, IČO 23250607<br>Průběžná 1033/4, 100 00 Praha 10<br><a class="mail" href="mailto:cookpit@spaicestudio.cz">cookpit@spaicestudio.cz</a></address>
+      </div>
+      <nav aria-label="Patička">
+        <ul>
+          <li><a href="/podpora/">Podpora</a></li>
+          <li><a href="/soukromi/">Soukromí</a></li>
+          <li><a href="/podminky/">Podmínky</a></li>
+          <li><a href="/smazani-uctu/">Smazání účtu</a></li>
+        </ul>
+      </nav>
+      <p class="made"><span>© 2026 Petr Chajda</span><span>Navrhlo a vyvinulo <a href="https://spaicestudio.cz">spaice studio</a></span></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
