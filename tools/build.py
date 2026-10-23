@@ -187,6 +187,7 @@ def page(path, title, main, description, current=None, index=True):
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
+<!--email_off-->
   <a class="skip" href="#obsah">Přeskočit na obsah</a>
 
   <header class="top" data-top>
@@ -222,6 +223,7 @@ def page(path, title, main, description, current=None, index=True):
   </footer>
 
   <script src="/assets/js/site.js" defer></script>
+<!--/email_off-->
 </body>
 </html>
 '''
