@@ -388,7 +388,7 @@ a { color: inherit; }
 
 /* Tablet a menší: text nad fotkou */
 @media (max-width: 1023px) {
-  .hero__frame { display: flex; flex-direction: column; min-height: 0; }
+  .hero__frame { display: flex; flex-direction: column; align-items: stretch; min-height: 0; }
   .hero__frame::before { display: none; }
   .hero__copy { order: -1; max-width: 40rem; padding: clamp(36px, 7vw, 56px) clamp(24px, 6vw, 48px) 8px; }
   .hero__media { position: relative; display: block; aspect-ratio: 16 / 10; }
@@ -408,7 +408,7 @@ a { color: inherit; }
   .privacy__list li { padding: 22px 22px 22px 0; border-bottom: 1px solid var(--line); }
   .privacy__list li + li { padding-left: 0; border-left: 0; }
   .privacy__list li:nth-child(even) { padding-left: 22px; border-left: 1px solid var(--line); }
-  .closing__frame { display: flex; flex-direction: column; min-height: 0; }
+  .closing__frame { display: flex; flex-direction: column; align-items: stretch; min-height: 0; }
   .closing__frame::before { display: none; }
   .closing__frame > img { position: relative; inset: auto; z-index: 0; aspect-ratio: 16 / 10; height: auto; object-position: 66% 50%; }
   .closing__copy { order: -1; max-width: 36rem; padding: clamp(36px, 7vw, 56px) clamp(24px, 6vw, 48px) 32px; }
